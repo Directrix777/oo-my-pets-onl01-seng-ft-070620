@@ -40,6 +40,13 @@ class Owner
     Cat.all.each{|cat| cat.mood = "happy"}
   end
 
+  def sell_pets
+    Cat.all.each{|cat|
+      cat.mood = "nervous"
+      cat.owner = nil
+    }
+  end
+
   def self.all
     @@all
   end
