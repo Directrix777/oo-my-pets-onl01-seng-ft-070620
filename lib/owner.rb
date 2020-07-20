@@ -29,7 +29,7 @@ class Owner
   end
 
   def buy_dog(dog)
-    Cat.all.each{|doggo| doggo.owner = self if doggo.name == dog}
+    Dog.all.each{|doggo| doggo.owner = self if doggo.name == dog}
   end
 
   def self.all
