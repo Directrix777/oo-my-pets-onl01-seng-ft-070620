@@ -24,6 +24,10 @@ class Owner
     Dog.all.select{|dog| dog if dog.owner == self}
   end
 
+  def buy_cat(cat)
+    Cat.all.each{|kitty| kitty.owner = self if kitty.name == cat}
+  end
+
   def self.all
     @@all
   end
