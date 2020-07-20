@@ -29,7 +29,7 @@ class Owner
   end
 
   def buy_dog(dog)
-    Dog.all.each{|doggo| doggo.owner = self if doggo.name == dog}
+    Dog.new(dog, self)
   end
 
   def walk_dogs
