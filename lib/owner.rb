@@ -1,4 +1,4 @@
-
+require "pry"
 
 class Owner
 
@@ -25,7 +25,8 @@ class Owner
   end
 
   def buy_cat(cat)
-    Cat.all.each{|kitty| kitty.owner = self if kitty.name == cat}
+    Cat.all.each{|kitty| kitty.owner = self if kitty.name == cat
+    binding.pry}
   end
 
   def buy_dog(dog)
