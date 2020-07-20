@@ -45,6 +45,11 @@ class Owner
       cat.mood = "nervous"
       cat.owner = nil
     }
+
+    Dog.all.each{|dog|
+      dog.mood = "nervous"
+      dog.owner = nil
+    }
   end
 
   def self.all
