@@ -24,8 +24,8 @@ class Owner
     Dog.all.select{|dog| dog if dog.owner == self}
   end
 
-  def buy_cat(cat)
-    Cat.all.each{|kitty| kitty.owner = self if kitty.name == cat
+  def buy_cat(catt)
+    Cat.all.each{|kitty| kitty.owner = self if kitty.name == catt
     binding.pry}
   end
 
