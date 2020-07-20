@@ -32,6 +32,14 @@ class Owner
     Dog.all.each{|doggo| doggo.owner = self if doggo.name == dog}
   end
 
+  def walk_dogs
+    Dog.all.each{|dog| dog.mood = "happy"}
+  end
+
+  def feed_cats
+    Cat.all.each{|cat| cat.mood = "happy"}
+  end
+
   def self.all
     @@all
   end
