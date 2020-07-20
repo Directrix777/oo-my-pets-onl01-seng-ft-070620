@@ -18,6 +18,11 @@ class Owner
 
   def cats
     Cat.all.select(|cat| return cat if cat.owner == self)
+  end
+
+  def dogs
+    Dog.all.select(|dog| return dog if dog.owner == self)
+  end
 
   def self.all
     @@all
